@@ -17,14 +17,17 @@ export class ChatComponent {
   chatService: ChatService = inject(ChatService);
 
   constructor() {
-    this.chatService.getAllChats().subscribe(chatList => this.chatList = chatList);
+    this.chatService.getAllChats().subscribe((chatList: Chat[]) => this.chatList = chatList.reverse());
   }
 
   onSubmit(message: string) {
     if (!message) { return; }
-    console.log(message);
     this.chatService.postChat(message).subscribe(message => {
-      this.chatList.push(message);
+      this.chatList.unshift(message);
     });
+  }
+
+  receive(){
+    this.chatService.getAllChats().subscribe((chatList: Chat[]) => this.chatList = chatList.reverse());
   }
 }

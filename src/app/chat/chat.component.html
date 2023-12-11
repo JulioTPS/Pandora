@@ -1,10 +1,32 @@
-<div>
-    @for (message of chatList; track message.text) {
-    <div>{{ message.sender }}: {{ message.text }} </div>
-    } @empty {
-    <div> There are no items. </div>
-    }
-    <label for="userInput">Enter a string:</label>
-    <input type="text" #messageInput />
-    <button (click)="onSubmit(messageInput.value); messageInput.value=''">Submit</button>
+<div class="chat-content">
+    <div class="chat-container">
+        <div class="header" style="font-family:Georgia, 'Times New Roman', Times, serif; font-weight: 900;">PANDORA
+        </div>
+        <div class="chat-messages">
+            @for (message of chatList; track message.text) {
+            @if (message.sender == 1) {
+            <div class="message-user">
+                <img width="8%" src="assets/patient.png" alt="user icon">
+                <div class="message-text">
+                    <div>{{ message.text }} </div>
+                </div>
+            </div>
+            }@else {
+            <div class="message-bot">
+                <img width="8%" src="assets/bot.png" alt="bot icon">
+                <div class="message-text">
+                    <div>{{ message.text }} </div>
+                </div>
+            </div>
+            }
+            } @empty {
+            <div> Sem menssagens. </div>
+            }
+        </div>
+        <div class="input-container">
+            <input (keyup.enter)="onSubmit(messageInput.value); messageInput.value=''" type="text" #messageInput placeholder="Escreva uma mensagem...">
+            <button (click)="onSubmit(messageInput.value); messageInput.value=''">Enviar</button>
+            <img style="cursor: pointer;" (click)="receive()" width="4%" src="assets/refresh.png" alt="refresh icon">
+        </div>
+    </div>
 </div>

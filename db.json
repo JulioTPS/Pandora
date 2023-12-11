@@ -9,16 +9,6 @@
       "sender": 2,
       "text": "aaaaa",
       "id": 2
-    },
-    {
-      "sender": 1,
-      "text": "cccc",
-      "id": 3
-    },
-    {
-      "sender": 1,
-      "text": "eeeee",
-      "id": 4
     }
   ]
 }
