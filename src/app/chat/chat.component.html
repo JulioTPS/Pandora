@@ -1,0 +1,10 @@
+<div>
+    @for (message of chatList; track message.text) {
+    <div>{{ message.sender }}: {{ message.text }} </div>
+    } @empty {
+    <div> There are no items. </div>
+    }
+    <label for="userInput">Enter a string:</label>
+    <input type="text" #messageInput />
+    <button (click)="onSubmit(messageInput.value); messageInput.value=''">Submit</button>
+</div>
