@@ -1,6 +1,6 @@
 # Pandora
 
-A front-end prject of a chat bot. It has a chat page where you can send message and receive the chat.
+A front-end prject of a chat bot, made for a University project. It has a chat page where you can send message and receive the chat.
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.6.
 
 ## Development server
