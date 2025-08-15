@@ -1,14 +1,15 @@
 # Pandora
 
+A front-end prject of a chat bot. It has a chat page where you can send message and receive the chat.
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.6.
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Run `npm run ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
 ## Test server
 
-You can start a test server with `json-server --watch db.json`
+You can start a test server with `npx json-server --watch db.json`
 
 ## Code scaffolding
 
